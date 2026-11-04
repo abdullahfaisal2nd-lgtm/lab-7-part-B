@@ -1,0 +1,6 @@
+#ifndef LAB07_HOSTEL_MENU_H
+#define LAB07_HOSTEL_MENU_H
+
+void showHostelMenu();
+
+#endif

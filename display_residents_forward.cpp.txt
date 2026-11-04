@@ -1,0 +1,22 @@
+#include "hostel_doubly_linked_list.h"
+#include <iostream>
+
+void HostelDoublyLinkedList::PrintForward() const
+{
+    std::cout << "\nResidents (First to Last):\n";
+
+    for (ResidentNode* node = head; node != nullptr; node = node->right)
+    {
+        std::cout << "\nStudent ID: " << node->studentID << '\n';
+        std::cout << "Room Number: " << node->roomNumber << '\n';
+        std::cout << "Name: " << node->residentName << '\n';
+        std::cout << "Department: " << node->department << '\n';
+        std::cout << "Phone: " << node->phoneNumber << '\n';
+        std::cout << "Guardian: " << node->guardianName << '\n';
+        if (node == current)
+            std::cout << " [CURRENT]";
+        std::cout << "\n-----------------------------\n";
+    }
+
+    std::cout << "Total residents: " << Count() << '\n';
+}

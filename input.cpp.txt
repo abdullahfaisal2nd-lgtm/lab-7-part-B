@@ -1,0 +1,36 @@
+#include "input.h"
+#include <iostream>
+#include <limits>
+
+ResidentNode* readResidentFromUser()
+{
+    int studentID;
+    int roomNumber;
+    std::string residentName;
+    std::string department;
+    std::string phoneNumber;
+    std::string guardianName;
+
+    std::cout << "Student ID: ";
+    std::cin >> studentID;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    std::cout << "Room Number: ";
+    std::cin >> roomNumber;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    std::cout << "Resident Name: ";
+    std::getline(std::cin, residentName);
+
+    std::cout << "Department: ";
+    std::getline(std::cin, department);
+
+    std::cout << "Phone Number: ";
+    std::getline(std::cin, phoneNumber);
+
+    std::cout << "Guardian Name: ";
+    std::getline(std::cin, guardianName);
+
+    return new ResidentNode(studentID, roomNumber, residentName,
+                            department, phoneNumber, guardianName);
+}

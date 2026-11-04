@@ -1,0 +1,25 @@
+#ifndef LAB07_HOSTEL_RESIDENT_NODE_H
+#define LAB07_HOSTEL_RESIDENT_NODE_H
+
+#include <string>
+
+struct ResidentNode
+{
+    int studentID;
+    int roomNumber;
+    std::string residentName;
+    std::string department;
+    std::string phoneNumber;
+    std::string guardianName;
+    ResidentNode* left;
+    ResidentNode* right;
+
+    ResidentNode(int id, int room, const std::string& name,
+                 const std::string& dept, const std::string& phone,
+                 const std::string& guardian)
+        : studentID(id), roomNumber(room), residentName(name),
+          department(dept), phoneNumber(phone), guardianName(guardian),
+          left(nullptr), right(nullptr) {}
+};
+
+#endif

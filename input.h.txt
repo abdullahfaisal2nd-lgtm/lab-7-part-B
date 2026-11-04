@@ -1,0 +1,8 @@
+#ifndef LAB07_HOSTEL_INPUT_H
+#define LAB07_HOSTEL_INPUT_H
+
+#include "resident_node.h"
+
+ResidentNode* readResidentFromUser();
+
+#endif

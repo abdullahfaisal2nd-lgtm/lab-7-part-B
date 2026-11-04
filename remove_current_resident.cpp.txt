@@ -1,0 +1,27 @@
+#include "hostel_doubly_linked_list.h"
+
+ResidentNode* HostelDoublyLinkedList::RemoveCurrent()
+{
+    if (current == nullptr)
+        return nullptr;
+
+    ResidentNode* removed = current;
+    ResidentNode* previous = removed->left;
+    ResidentNode* next = removed->right;
+
+    if (previous != nullptr)
+        previous->right = next;
+    else
+        head = next;
+
+    if (next != nullptr)
+        next->left = previous;
+    else
+        tail = previous;
+
+    current = (next != nullptr) ? next : previous;
+    removed->left = nullptr;
+    removed->right = nullptr;
+    count--;
+    return removed;
+}

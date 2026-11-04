@@ -1,0 +1,18 @@
+#include "menu.h"
+#include <iostream>
+
+void showHostelMenu()
+{
+    std::cout << "\n===== Hostel Management System =====\n";
+    std::cout << "1. Display Current Resident (Full Details)\n";
+    std::cout << "2. Move to Next Resident\n";
+    std::cout << "3. Move to Previous Resident\n";
+    std::cout << "4. Add Resident at the End (Complete Details)\n";
+    std::cout << "5. Add Resident After Current (Complete Details)\n";
+    std::cout << "6. Remove Current Resident\n";
+    std::cout << "7. Display All Residents with Full Details\n";
+    std::cout << "8. Display Residents Backward\n";
+    std::cout << "9. Check Status and Total Residents\n";
+    std::cout << "10. Exit\n";
+    std::cout << "Enter your choice: ";
+}

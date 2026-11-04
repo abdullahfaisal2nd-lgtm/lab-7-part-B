@@ -1,0 +1,23 @@
+#include "hostel_doubly_linked_list.h"
+
+void HostelDoublyLinkedList::InsertAfterCurrent(ResidentNode* node)
+{
+    if (node == nullptr)
+        return;
+
+    if (current == nullptr)
+    {
+        InsertRight(node);
+        return;
+    }
+
+    node->left = current;
+    node->right = current->right;
+
+    if (current->right != nullptr)
+        current->right->left = node;
+    else
+        tail = node;
+
+    current->right = node;
+}

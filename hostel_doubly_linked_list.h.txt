@@ -1,0 +1,35 @@
+#ifndef LAB07_HOSTEL_DOUBLY_LINKED_LIST_H
+#define LAB07_HOSTEL_DOUBLY_LINKED_LIST_H
+
+#include "resident_node.h"
+
+class HostelDoublyLinkedList
+{
+private:
+    ResidentNode* head;
+    ResidentNode* tail;
+    ResidentNode* current;
+    int count;
+
+    void clear();
+
+public:
+    HostelDoublyLinkedList();
+    ~HostelDoublyLinkedList();
+
+    bool IsEmpty() const;
+    bool IsNotEmpty() const;
+    int Count() const;
+
+    void InsertRight(ResidentNode* node);
+    void Next();
+    void Previous();
+    void InsertAfterCurrent(ResidentNode* node);
+    ResidentNode* RemoveCurrent();
+
+    void PrintCurrent() const;
+    void PrintForward() const;
+    void PrintBackward() const;
+};
+
+#endif

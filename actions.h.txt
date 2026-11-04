@@ -1,0 +1,6 @@
+#ifndef LAB07_HOSTEL_ACTIONS_H
+#define LAB07_HOSTEL_ACTIONS_H
+
+void runHostelManagementSystem();
+
+#endif
